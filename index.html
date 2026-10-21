@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOHD SHAHID | Luxury Civil Contractor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark-bg: #0A0B0E;
+            --card-bg: rgba(22, 27, 34, 0.85);
+            --border-gold: rgba(212, 175, 55, 0.35);
+            --font-title: 'Cinzel', serif;
+            --font-serif: 'Playfair Display', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { background-color: var(--dark-bg); color: #E0E0E0; font-family: var(--font-body); line-height: 1.6; }
+
+        .whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: #25D366; color: white; padding: 12px 22px; border-radius: 50px; font-weight: bold; text-decoration: none; box-shadow: 0 10px 20px rgba(0,0,0,0.5); z-index: 1001; font-size: 0.95rem; }
+
+        nav { position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 18px 6%; background: rgba(10, 11, 14, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-gold); z-index: 1000; }
+        .logo { font-family: var(--font-title); font-size: 1.3rem; font-weight: 700; color: var(--gold); letter-spacing: 2px; }
+        .nav-links a { color: #BBB; text-decoration: none; margin-left: 20px; font-size: 0.85rem; font-family: var(--font-title); transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
+
+        .hero { height: 100vh; background: linear-gradient(to bottom, rgba(10, 11, 14, 0.65), rgba(10, 11, 14, 0.95)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000') center/cover fixed; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; }
+        .hero-badge { background: rgba(212, 175, 55, 0.15); border: 1px solid var(--gold); color: var(--gold); padding: 6px 18px; font-size: 0.8rem; font-family: var(--font-title); letter-spacing: 2px; margin-bottom: 20px; border-radius: 50px; }
+        .hero h1 { font-family: var(--font-serif); font-size: 3.8rem; color: #FFF; margin-bottom: 15px; }
+        .hero p { font-family: var(--font-serif); font-size: 1.25rem; color: #CCC; font-style: italic; max-width: 750px; margin-bottom: 30px; }
+
+        .btn-gold { background: linear-gradient(135deg, #D4AF37 0%, #AA771C 100%); color: #000; padding: 14px 32px; text-decoration: none; font-weight: 700; font-size: 0.9rem; border-radius: 2px; letter-spacing: 1px; text-transform: uppercase; border: none; cursor: pointer; display: inline-block; transition: 0.3s; }
+        .btn-gold:hover { color: #FFF; transform: translateY(-2px); }
+
+        .section { padding: 100px 8%; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header span { font-family: var(--font-title); color: var(--gold); font-size: 0.8rem; letter-spacing: 3px; }
+        .section-header h2 { font-family: var(--font-serif); font-size: 2.6rem; color: #FFF; margin-top: 5px; }
+
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: var(--card-bg); border: 1px solid var(--border-gold); padding: 35px; border-radius: 6px; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--gold); }
+        .card h3 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--gold); margin-bottom: 12px; }
+        .card p { color: #AAA; font-size: 0.95rem; }
+
+        .about-box { background: var(--card-bg); border: 1px solid var(--border-gold); padding: 50px; border-radius: 6px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .about-box h3 { font-family: var(--font-serif); font-size: 2rem; color: var(--gold); margin-bottom: 20px; }
+        .about-box p { color: #DDD; font-size: 1.05rem; margin-bottom: 15px; }
+
+        form { background: var(--card-bg); border: 1px solid var(--border-gold); padding: 40px; max-width: 700px; margin: 0 auto; border-radius: 6px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-family: var(--font-title); font-size: 0.8rem; color: var(--gold); margin-bottom: 8px; letter-spacing: 1px; }
+        input, select, textarea { width: 100%; padding: 14px; background: #050508; border: 1px solid #222; color: #FFF; font-size: 0.95rem; border-radius: 4px; }
+        
+        .price-badge-box { background: rgba(0,0,0,0.6); border: 1px dashed var(--gold); padding: 15px; text-align: center; border-radius: 4px; margin-top: 15px; }
+        .price-badge-box span { font-family: var(--font-serif); font-size: 1.5rem; color: var(--gold); font-weight: bold; }
+
+        footer { text-align: center; padding: 30px; background: #050507; color: #555; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/917007679125?text=Hello%20Mohd%20Shahid%20Sir,%20mujhe%20construction%20work%20ke%20liye%20baat%20karni%20hai." class="whatsapp-float" target="_blank">
+        💬 Chat on WhatsApp
+    </a>
+
+    <nav>
+        <div class="logo">MOHD SHAHID</div>
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#projects">Landmarks</a>
+            <a href="#about">About Us</a>
+            <a href="#order">Book Order</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-badge">35+ YEARS OF EXCELLENCE IN CIVIL CONSTRUCTION</div>
+        <h1>MOHD SHAHID</h1>
+        <p>"Building High-Strength, Luxurious Modern Spaces in Kannauj & Across Uttar Pradesh."</p>
+        <a href="#order" class="btn-gold">Give Work Order</a>
+    </section>
+
+    <section class="section" id="services">
+        <div class="section-header">
+            <span>What We Build</span>
+            <h2>Ghar Aur Building Construction</h2>
+        </div>
+        <div class="grid-3">
+            <div class="card">
+                <h3>Luxury Home Construction</h3>
+                <p>Naye ghar, bungalow aur villas ka complete structural design aur high-strength material ke saath 100% strong construction.</p>
+            </div>
+            <div class="card">
+                <h3>Commercial Showrooms</h3>
+                <p>Bade showrooms, shops, aur multi-floor market complexes ka heavy civil engineering framework aur modern front glass facade.</p>
+            </div>
+            <div class="card">
+                <h3>Complete Renovation</h3>
+                <p>Purane ghar ko todkar naya stylish look dena, interior expansion, aur complete layout transformation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="projects" style="background: #0D0F14;">
+        <div class="section-header">
+            <span>Proven Track Record</span>
+            <h2>Major Projects Constructed</h2>
+        </div>
+        <div class="grid-3">
+            <div class="card">
+                <h3>HERO Automobile Showroom</h3>
+                <p>Complete commercial structural design, high-span roof civil construction, and heavy-duty flooring execution.</p>
+            </div>
+            <div class="card">
+                <h3>TVS Automobile Showroom</h3>
+                <p>Modern architectural commercial layout, glass-front structural work, and high-strength construction finish.</p>
+            </div>
+            <div class="card">
+                <h3>EASY MART Supermarket</h3>
+                <p>Large-scale retail space execution with spacious interior planning, heavy civil framework, and modern facade.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="section-header">
+            <span>The Master Builder</span>
+            <h2>About Mohd Shahid</h2>
+        </div>
+        <div class="about-box">
+            <h3>35+ Years Of Unmatched Quality & Trust</h3>
+            <p>MOHD SHAHID Civil Contractor Kannauj aur Uttar Pradesh ke sabse anubhavi aur trusted thekedaron mein se ek hain. 35 saal se zyada ke experience ke saath, unhone hazaron ghar aur bade commercial complexes ko majbooti aur khoobsurati ke saath tayyar kiya hai.</p>
+            <p><b>Address:</b> Safdarganj, Jodi Naath Mandir Road, Kannauj, Uttar Pradesh</p>
+            <p><b>Direct Contact:</b> +91 7007679125 | +91 9919228085</p>
+        </div>
+    </section>
+
+    <!-- INTEGRATED LIVE CALCULATOR & ORDER FORM -->
+    <section class="section" id="order" style="background: #0D0F14;">
+        <div class="section-header">
+            <span>Direct Work Request & Estimation</span>
+            <h2>Book Construction Order</h2>
+        </div>
+        <form onsubmit="sendToWhatsApp(event)">
+            <div class="form-group">
+                <label>Aapka Naam (Customer Name)</label>
+                <input type="text" id="custName" placeholder="Enter full name" required>
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" id="custPhone" placeholder="Enter phone number" required>
+            </div>
+            <div class="form-group">
+                <label>Kaam Ka Category</label>
+                <select id="custWork" required>
+                    <option value="">Select Option</option>
+                    <option value="Naya Ghar / Villa Construction">Naya Ghar / Villa Construction</option>
+                    <option value="Commercial Building / Showroom">Commercial Building / Showroom</option>
+                    <option value="Complete Renovation Work">Complete Renovation Work</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Plot / Land Area (In Sq. Ft.)</label>
+                <input type="number" id="custSqft" placeholder="e.g. 1000" oninput="liveCalculator()" required>
+            </div>
+            <div class="form-group">
+                <label>Kitne Floors Banwane Hain?</label>
+                <select id="custFloors" onchange="liveCalculator()" required>
+                    <option value="1">1 Floor (Ground Floor)</option>
+                    <option value="2">2 Floors (Ground + 1st Floor)</option>
+                    <option value="3">3 Floors (Ground + 2 Floors)</option>
+                    <option value="4">4 Floors (Ground + 3 Floors)</option>
+                </select>
+            </div>
+
+            <div class="price-badge-box">
+                <p style="font-size:0.85rem; color:#AAA;">Estimated Total Construction Budget (@ ₹1,500/Sq.Ft):</p>
+                <span id="livePriceDisplay">₹0</span>
+            </div>
+
+            <div class="form-group" style="margin-top: 20px;">
+                <label>Extra Details / Messages</label>
+                <textarea id="custDetails" rows="3" placeholder="Koi special design requirement ya baat likhein..."></textarea>
+            </div>
+            <button type="submit" class="btn-gold" style="width: 100%;">Submit Order via WhatsApp</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© MOHD SHAHID Construction Services, Kannauj. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        let calculatedTotal = 0;
+
+        function liveCalculator() {
+            let sqft = document.getElementById('custSqft').value;
+            let floors = document.getElementById('custFloors').value;
+            let rate = 1500;
+
+            if (sqft > 0 && floors > 0) {
+                calculatedTotal = sqft * rate * floors;
+                document.getElementById('livePriceDisplay').innerText = "₹" + calculatedTotal.toLocaleString('en-IN');
+            } else {
+                calculatedTotal = 0;
+                document.getElementById('livePriceDisplay').innerText = "₹0";
+            }
+        }
+
+        function sendToWhatsApp(e) {
+            e.preventDefault();
+            
+            let name = document.getElementById('custName').value;
+            let phone = document.getElementById('custPhone').value;
+            let work = document.getElementById('custWork').value;
+            let sqft = document.getElementById('custSqft').value;
+            let floors = document.getElementById('custFloors').value;
+            let details = document.getElementById('custDetails').value;
+            
+            let myPhoneNumber = "917007679125"; 
+
+            let message = "*NEW CONSTRUCTION ORDER*%0A%0A" +
+                          "*Customer Name:* " + name + "%0A" +
+                          "*Phone:* " + phone + "%0A" +
+                          "*Work Category:* " + work + "%0A" +
+                          "*Plot Size:* " + sqft + " Sq. Ft.%0A" +
+                          "*Floors:* " + floors + " Floor(s)%0A" +
+                          "*Estimated Cost:* ₹" + calculatedTotal.toLocaleString('en-IN') + "%0A" +
+                          "*Details:* " + (details ? details : "N/A");
+
+            let whatsappUrl = "https://wa.me/" + myPhoneNumber + "?text=" + message;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
