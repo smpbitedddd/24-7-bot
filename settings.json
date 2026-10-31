@@ -6,8 +6,8 @@
     "type": "offline"
   },
   "server": {
-    "ip": "BITEDSMP.aternos.me",
-    "port": 43464,
+    "ip": "BITEDSMPS2.aternos.me",
+    "port": 55494,
     "version": "1.20.1",
     "try-creative": false
   },
